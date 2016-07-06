@@ -66,7 +66,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Miquel Colomer** - *Initial work* - [PurpleBooth](https://github.com/mcolomer)
+* **Miquel Colomer** - *Initial work* - [mcolomer](https://github.com/mcolomer)
 
 See also the list of [contributors](https://github.com/mcolomer/any-file/contributors) who participated in this project.
 
