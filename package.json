@@ -1,14 +1,14 @@
 {
-  "name": "any-download",
-  "version": "0.0.3",
-  "description": "Module to download files from any source (s3, ftp, http - direct, auth -)",
+  "name": "any-file",
+  "version": "0.0.1",
+  "description": "Module to operate with files on different sources (s3, ftp, sftp/scp, http - direct, auth -)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mcolomer/any-download.git"
+    "url": "git@github.com:mcolomer/any-file.git"
   },
   "keywords": [
     "download",
@@ -19,9 +19,9 @@
   "author": "Miquel Colomer Salas",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/mcolomer/any-download/issues"
+    "url": "https://github.com/mcolomer/any-file/issues"
   },
-  "homepage": "https://github.com/mcolomer/any-download",
+  "homepage": "https://github.com/mcolomer/any-file",
   "dependencies": {
     "aws-sdk": "^2.4.5",
     "jsftp": "^1.5.3",
