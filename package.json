@@ -23,6 +23,12 @@
   },
   "homepage": "https://github.com/mcolomer/any-download",
   "dependencies": {
+    "jsftp": "^1.5.3",
+    "request": "^2.72.0",
     "s3-download": "^1.0.0"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "mocha": "^2.5.3"
   }
 }
