@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/mcolomer/any-download",
   "dependencies": {
+    "aws-sdk": "^2.4.5",
     "jsftp": "^1.5.3",
     "s3-download": "^1.0.0"
   },
