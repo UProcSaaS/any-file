@@ -67,7 +67,7 @@ Next are sources accepted by the library:
 You can copy ftp file to local file
 ```
 var af = new AnyFile();
-anyfile.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+af.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
 	if (res) {
 		console.log("File copied!");
 	} else {
@@ -79,7 +79,7 @@ anyfile.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip"
 Or http file with needed auth to local file
 ```
 var af = new AnyFile();
-anyfile.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+af.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
 	if (res) {
 		console.log("File copied!");
 	} else {
