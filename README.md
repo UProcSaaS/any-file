@@ -53,13 +53,13 @@ Additionally, if no protocol schema is defined, local system is assumed.
 
 Next are sources accepted by the library:
 
-* ftp: ftp://username:password@ftpserver.com/path/to/file.csv
-* s3: s3://accesskey:secretkey@s3.amazonaws.com/bucket/to/file.csv (by default, us east zone)
-* s3: s3://accesskey:secretkey@s3-eu-west.amazonaws.com/bucket/path/to/file.csv (specific amazon region: eu-west)
-* http: http://webserver.com/path/to/file.csv
-* http auth: http://username:password@webserver.com/path/to/file.csv
-* sftp: sftp://username:password@sshserver.com/path/to/file.csv
-* scp: scp://username:password@sshserver.com/path/to/file.csv
+* ftp://username:password@ftpserver.com/path/to/file.csv
+* s3://accesskey:secretkey@s3.amazonaws.com/bucket/to/file.csv (by default, us east zone)
+* s3://accesskey:secretkey@s3-eu-west.amazonaws.com/bucket/path/to/file.csv (specific amazon region: eu-west)
+* http://webserver.com/path/to/file.csv
+* http://username:password@webserver.com/path/to/file.csv
+* sftp://username:password@sshserver.com/path/to/file.csv
+* scp://username:password@sshserver.com/path/to/file.csv
 
 
 
