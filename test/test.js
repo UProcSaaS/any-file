@@ -20,7 +20,7 @@ describe('anyfile', function () {
   });
 
   it('s3 copy', function (done) {
-    anyfile.from("s3://accesskey:secretkey@bucket:/path/to/file.csv").to("file.csv", function(err, res) {
+    anyfile.from("s3://accesskey:secretkey@s3.amazonaws.com/bucket/path/to/file.csv").to("file.csv", function(err, res) {
       if (fs.exists('file.csv')) {
         fs.unlinkSync('file.csv');
       }
@@ -61,7 +61,7 @@ describe('anyfile', function () {
 
 
   it('sftp copy', function (done) {
-    anyfile.from("sftp://demo:password@test.rebex.net/readme.txt").to("readme.txt", function(err, res) {
+    anyfile.from("scp://demo:password@test.rebex.net/readme.txt").to("readme.txt", function(err, res) {
       if (fs.exists('readme.txt')) {
         fs.unlinkSync('readme.txt');
       }

@@ -1,6 +1,6 @@
 # Any-File
 
-This module allows operate with files between several kind of storage sources, like s3, sftp/scp, http - direct, auth -, local files, ftp ...
+This module allows operate with files between several kind of storage sources, like s3, scp, http - direct, auth -, local files, ftp ...
 
 ## Getting Started
 
@@ -55,16 +55,14 @@ Additionally, if no protocol schema is defined, local system is assumed.
 Next are sources accepted by the library:
 
 * ftp://username:password@ftpserver.com/path/to/file.csv
-* s3://accesskey:secretkey@s3.amazonaws.com/bucket/to/file.csv (by default, us east zone)
+* s3://accesskey:secretkey@s3.amazonaws.com/bucket/path/to/file.csv (by default, us east zone)
 * s3://accesskey:secretkey@s3-eu-west.amazonaws.com/bucket/path/to/file.csv (specific amazon region: eu-west)
 * http://webserver.com/path/to/file.csv
 * http://username:password@webserver.com/path/to/file.csv
-* sftp://username:password@sshserver.com/path/to/file.csv
 * scp://username:password@sshserver.com/path/to/file.csv
 
 
-
-You can copy ftp file to local file
+You can copy ftp file to local file system
 ```
 var af = new AnyFile();
 af.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
@@ -76,7 +74,7 @@ af.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to(
 });
 ```
 
-Or http file with needed auth to local file
+Or http file with needed auth to local file system
 ```
 var af = new AnyFile();
 af.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
