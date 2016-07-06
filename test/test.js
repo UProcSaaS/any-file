@@ -6,9 +6,6 @@ var fs = require('fs'),
 describe('anyfile', function () {
 
   beforeEach(function(done){
-    if (fs.exists('100KB.zip')) {
-      fs.unlinkSync('100KB.zip');
-    }
     anyfile = new AnyFile();
     done();
   });
@@ -21,31 +18,55 @@ describe('anyfile', function () {
     assert.ok(anyfile.from);
   });
 
-  it('s3 download', function (done) {
+  it('s3 copy', function (done) {
     anyfile.from("s3://accesskey:secretkey@bucket:/path/to/file.csv").to("file.csv", function(err, res) {
+      if (fs.exists('file.csv')) {
+        fs.unlinkSync('file.csv');
+      }
       assert.ok(res);
       done();
     });
   });
 
-  it('ftp download', function (done) {
+  it('ftp copy', function (done) {
     anyfile.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+      if (fs.exists('100KB.zip')) {
+        fs.unlinkSync('100KB.zip');
+      }
       assert.ok(res);
       done();
     });
   });
 
-  it('http download', function (done) {
+  it('http copy', function (done) {
     anyfile.from("http://speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+      if (fs.exists('100KB.zip')) {
+        fs.unlinkSync('100KB.zip');
+      }
       assert.ok(res);
       done();
     });
   });
 
-  it('http auth download', function (done) {
+  it('http auth copy', function (done) {
     anyfile.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+      if (fs.exists('100KB.zip')) {
+        fs.unlinkSync('100KB.zip');
+      }
       assert.ok(res);
       done();
     });
   });
+
+
+  it('sftp copy', function (done) {
+    anyfile.from("sftp://demo:password@test.rebex.net/readme.txt").to("readme.txt", function(err, res) {
+      if (fs.exists('readme.txt')) {
+        fs.unlinkSync('readme.txt');
+      }
+      assert.ok(res);
+      done();
+    });
+  });
+
 });
