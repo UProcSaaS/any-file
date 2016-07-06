@@ -1,7 +1,7 @@
 {
   "name": "any-file",
-  "version": "0.0.1",
-  "description": "Module to operate with files on different sources (s3, ftp, sftp/scp, http - direct, auth -)",
+  "version": "0.0.2",
+  "description": "Module to copy files between different storage systems (s3, ftp, sftp/scp, http - direct, auth -)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
