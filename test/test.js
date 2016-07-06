@@ -4,7 +4,8 @@ var fs = require('fs'),
     anyfile;
 
 describe('anyfile', function () {
-
+  this.timeout(5000);
+  
   beforeEach(function(done){
     anyfile = new AnyFile();
     done();
