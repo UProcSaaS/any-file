@@ -48,7 +48,8 @@ to("protocol://username:password@server/path/to/file", callback)
 ```
 
 Next protocols are accepted by the system: ftp, http, scp, sftp, s3.
-Additionally, if no protocol is defined, local system is assumed.
+
+Additionally, if no protocol schema is defined, local system is assumed.
 
 Next are sources accepted by the library:
 
