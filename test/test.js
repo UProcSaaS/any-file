@@ -1,4 +1,5 @@
-var assert = require('assert')
+var fs = require('fs'),
+    assert = require('assert')
   , AnyDownload = require('../')
   , anydownload;
 
@@ -25,8 +26,9 @@ describe('anydownload', function () {
   });
 
   it('ftp download', function (done) {
-    anydownload.download("ftp://username:password@myftpserver.com/path/to/file.csv", "file.csv", function(err, res) {
+    anydownload.download("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip", "100KB.zip", function(err, res) {
       assert.ok(res);
+      fs.unlinkSync('100KB.zip');
       done();
     });
   });
