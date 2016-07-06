@@ -1,7 +1,7 @@
 var fs = require('fs'),
-    assert = require('assert')
-  , AnyFile = require('../')
-  , anyfile;
+    assert = require('assert'),
+    AnyFile = require('../'),
+    anyfile;
 
 describe('anyfile', function () {
 
