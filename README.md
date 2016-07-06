@@ -35,6 +35,33 @@ All test use public files shared on internet. So, you have to find no problems w
 
 This module allow to copy files between different storage systems.
 
+All queries begin with calling function *from* to define source file to copy
+
+```
+from("protocol://username:password@server/path/to/file")
+```
+
+and define destination with method *to*
+
+```
+to("protocol://username:password@server/path/to/file", callback)
+```
+
+Next protocols are accepted by the system: ftp, http, scp, sftp, s3.
+Additionally, if no protocol is defined, local system is assumed.
+
+Next are sources accepted by the library:
+
+* ftp: ftp://username:password@ftpserver.com/path/to/file.csv
+* s3: s3://accesskey:secretkey@s3.amazonaws.com/bucket/to/file.csv (by default, us east zone)
+* s3: s3://accesskey:secretkey@s3-eu-west.amazonaws.com/bucket/path/to/file.csv (specific amazon region: eu-west)
+* http: http://webserver.com/path/to/file.csv
+* http auth: http://username:password@webserver.com/path/to/file.csv
+* sftp: sftp://username:password@sshserver.com/path/to/file.csv
+* scp: scp://username:password@sshserver.com/path/to/file.csv
+
+
+
 You can copy ftp file to local file
 ```
 var af = new AnyFile();
@@ -59,6 +86,16 @@ anyfile.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip
 });
 ```
 
+If you want to ```
+var af = new AnyFile();
+anyfile.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+	if (res) {
+		console.log("File copied!");
+	} else {
+		console.log("File not copied!");
+	}
+});
+```
 
 ## Versioning
 
