@@ -86,17 +86,6 @@ anyfile.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip
 });
 ```
 
-If you want to ```
-var af = new AnyFile();
-anyfile.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
-	if (res) {
-		console.log("File copied!");
-	} else {
-		console.log("File not copied!");
-	}
-});
-```
-
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
