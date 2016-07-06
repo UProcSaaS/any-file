@@ -1,0 +1,28 @@
+{
+  "name": "any-download",
+  "version": "0.0.1",
+  "description": "Module to download files from any source (s4, ftp, http)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mcolomer/any-download.git"
+  },
+  "keywords": [
+    "download",
+    "s3",
+    "ftp",
+    "http"
+  ],
+  "author": "Miquel Colomer Salas",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mcolomer/any-download/issues"
+  },
+  "homepage": "https://github.com/mcolomer/any-download",
+  "dependencies": {
+    "s3-download": "^1.0.0"
+  }
+}
