@@ -1,6 +1,6 @@
 {
   "name": "any-download",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Module to download files from any source (s3, ftp, http - direct, auth -)",
   "main": "index.js",
   "scripts": {
