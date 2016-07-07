@@ -1,6 +1,6 @@
 {
   "name": "any-file",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Module to copy files between different storage systems (s3, ftp, sftp/scp, http - direct, auth -)",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   "dependencies": {
     "aws-sdk": "^2.4.5",
     "jsftp": "^1.5.3",
-    "s3-download": "^1.0.0",
+    "s3": "^4.4.0",
     "scp2": "^0.5.0"
   },
   "devDependencies": {
