@@ -18,7 +18,7 @@ describe('anyfile', function () {
   it('should have main methods', function () {
     assert.ok(anyfile.from);
   });
-
+/*
   it('s3 copy', function (done) {
     anyfile.from("s3://accesskey:secretkey@s3.amazonaws.com/bucket/path/to/file.csv").to("file.csv", function(err, res) {
       if (fs.exists('file.csv')) {
@@ -28,8 +28,8 @@ describe('anyfile', function () {
       done();
     });
   });
-
-  it('ftp copy', function (done) {
+*/
+  it('ftp copy to local', function (done) {
     anyfile.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
       if (fs.exists('100KB.zip')) {
         fs.unlinkSync('100KB.zip');
@@ -39,7 +39,7 @@ describe('anyfile', function () {
     });
   });
 
-  it('http copy', function (done) {
+  it('http copy to local', function (done) {
     anyfile.from("http://speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
       if (fs.exists('100KB.zip')) {
         fs.unlinkSync('100KB.zip');
@@ -49,7 +49,7 @@ describe('anyfile', function () {
     });
   });
 
-  it('http auth copy', function (done) {
+  it('http auth copy to local', function (done) {
     anyfile.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
       if (fs.exists('100KB.zip')) {
         fs.unlinkSync('100KB.zip');
@@ -59,9 +59,8 @@ describe('anyfile', function () {
     });
   });
 
-
-  it('sftp copy', function (done) {
-    anyfile.from("scp://demo:password@test.rebex.net/readme.txt").to("readme.txt", function(err, res) {
+  it('sftp copy to local', function (done) {
+    anyfile.from("scp://demo:password@test.rebex.net:/readme.txt").to("readme.txt", function(err, res) {
       if (fs.exists('readme.txt')) {
         fs.unlinkSync('readme.txt');
       }
@@ -70,4 +69,13 @@ describe('anyfile', function () {
     });
   });
 
+  it('sftp copy to sftp', function (done) {
+    anyfile.from("scp://demo:password@test.rebex.net/readme.txt").to("scp://demo:password@test.rebex.net/readme2.txt", function(err, res) {
+      if (fs.exists('readme.txt')) {
+        fs.unlinkSync('readme.txt');
+      }
+      assert.ok(res);
+      done();
+    });
+  });
 });
