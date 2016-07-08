@@ -74,7 +74,9 @@ Next are sources accepted by the library:
 You can copy ftp file to local file system
 ```
 var af = new AnyFile();
-af.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+var fromFile ="ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip";
+var toFile = "100KB.zip";
+af.from(fromFile).to(toFile, function(err, res) {
 	if (res) {
 		console.log("File copied!");
 	} else {
@@ -86,7 +88,9 @@ af.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to(
 Or http file with needed auth to local file system
 ```
 var af = new AnyFile();
-af.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+var fromFile = "http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip";
+var toFile = "100KB.zip";
+af.from(fromFile).to(toFile, function(err, res) {
 	if (res) {
 		console.log("File copied!");
 	} else {
@@ -100,7 +104,7 @@ Or copy from sftp to s3
 var af = new AnyFile();
 var fromFile = "sftp://demo:password@test.rebex.net:/readme.txt";
 var toFile = "s3://AKIAIZHM3T2QFIRSVQ5A:gxxxYv+PuyihUrg0EqJ8U1C0pxBwxZGPO0U2DuhX@s3.amazon.com/any-file-us/readme.txt";
-af.from(fromFile).to("100KB.zip", function(err, res) {
+af.from(fromFile).to(toFile, function(err, res) {
 	if (res) {
 		console.log("File copied!");
 	} else {
