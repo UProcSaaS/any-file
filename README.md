@@ -60,7 +60,6 @@ Next protocols are accepted by the library:
 Additionally, if no protocol schema is defined, local system is assumed. 
 
 No file format is considered when transmiting. No file contents modification is applied when copying file from source to destination.
-Compression transformations will be applied on the future.
 
 Next are sources accepted by the library:
 
