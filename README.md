@@ -123,6 +123,10 @@ On future releases, these features will be added:
 	- from .log.bz2 extension => to: .log extension (apply bzip2 uncompression to destination file)
 - events (start, progress, end, error) instead of callbacks
 
+## Contributions
+
+Please, feel free to send pull requests or comments to the project. Contributions are welcome!
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
