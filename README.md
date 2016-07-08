@@ -119,8 +119,8 @@ You can find more code samples on samples folder using accepted protocols (http,
 
 On future releases, these features will be added:
 - compress/uncompress files (locally) if source and destination extensions differ. Samples: 
-	- from: .log extension => to: .log.gz extension (apply gzip commpression on destination file)
-	- from .log.bz2 extension => to: .log extension (apply bzip2 uncompression to destination file)
+	- from: .log extension => to: .log.gz extension (apply gzip compression on destination file)
+	- from .log.bz2 extension => to: .log extension (apply bzip2 uncompression to source file)
 - events (start, progress, end, error) instead of callbacks
 
 ## Contributions
