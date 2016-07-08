@@ -1,6 +1,6 @@
 # Any-File
 
-This module allows operate with files between several kind of storage sources, like s3, scp, http - direct, auth -, local files, ftp ...
+Node.js library to copy files between several storage sources (ftp, http, s3, ssh, local, ...)
 
 ## Getting Started
 
