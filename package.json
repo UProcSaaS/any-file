@@ -1,7 +1,7 @@
 {
   "name": "any-file",
-  "version": "0.0.6",
-  "description": "Module to copy files between different storage systems (s3, ftp, sftp/scp, http - direct, auth -)",
+  "version": "0.0.7",
+  "description": "Node.js library to copy files between several storage sources (ftp, http, s3, ssh, local, ...)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,10 +11,13 @@
     "url": "git@github.com:mcolomer/any-file.git"
   },
   "keywords": [
-    "download",
+    "file",
     "s3",
     "ftp",
-    "http"
+    "http",
+    "scp",
+    "upload",
+    "download"
   ],
   "author": "Miquel Colomer Salas",
   "license": "Apache-2.0",

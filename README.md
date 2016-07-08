@@ -49,7 +49,12 @@ and define destination with method *to*
 to("protocol://username:password@server/path/to/file", callback)
 ```
 
-Next protocols are accepted by the system: ftp, http, scp, s3 and local file system.
+Next protocols are accepted by the library:
+* ftp
+* http (only download)
+* scp
+* s3 
+* local file system
 
 Additionally, if no protocol schema is defined, local system is assumed. 
 
