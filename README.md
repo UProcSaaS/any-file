@@ -103,7 +103,7 @@ af.from(fromFile).to("100KB.zip", function(err, res) {
 });
 ```
 
-You can find more code samples on samples folder. You will find common samples with ftp, s3, scp and local. Please, check it out.
+You can find more code samples on samples folder using accepted protocols (http, ftp, s3, scp and local). Please, check it out.
 
 ## Todo
 
