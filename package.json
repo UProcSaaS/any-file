@@ -1,6 +1,6 @@
 {
   "name": "any-file",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Node.js library to copy files between several storage sources (ftp, http, s3, ssh, local, ...)",
   "main": "index.js",
   "scripts": {
@@ -34,5 +34,6 @@
   "devDependencies": {
     "assert": "^1.4.1",
     "mocha": "^2.5.3"
-  }
+  },
+  "main": "index"
 }
