@@ -4,7 +4,8 @@ var toFile = "scp://myuser@mysshserver.com:~/100KB.zip";
 
 try {
   anyfile.from(fromFile).to(toFile, function(err, res) {
-    console.log(err);
+    console.log(res);
+    process.exit();
   });
 } catch (e) {
   console.log(e);

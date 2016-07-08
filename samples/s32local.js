@@ -5,6 +5,7 @@ var toFile = "100KB-new.zip";
 try {
   anyfile.from(fromFile).to(toFile, function(err, res) {
     console.log(res);
+    process.exit();
   });
 } catch (err) {
   console.log(err);
