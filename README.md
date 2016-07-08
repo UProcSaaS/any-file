@@ -31,7 +31,6 @@ make test
 ```
 
 All test use public files shared on internet. So, you have to find no problems when testing.
-Please
 
 ### Samples
 
