@@ -18,17 +18,7 @@ describe('anyfile', function () {
   it('should have main methods', function () {
     assert.ok(anyfile.from);
   });
-/*
-  it('s3 copy', function (done) {
-    anyfile.from("s3://accesskey:secretkey@s3.amazonaws.com/bucket/path/to/file.csv").to("file.csv", function(err, res) {
-      if (fs.exists('file.csv')) {
-        fs.unlinkSync('file.csv');
-      }
-      assert.ok(res);
-      done();
-    });
-  });
-*/
+
   it('ftp copy to local', function (done) {
     anyfile.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
       if (fs.exists('100KB.zip')) {
@@ -69,8 +59,18 @@ describe('anyfile', function () {
     });
   });
 
-  it('sftp copy to sftp', function (done) {
-    anyfile.from("scp://demo:password@test.rebex.net/readme.txt").to("scp://demo:password@test.rebex.net/readme2.txt", function(err, res) {
+  it('sftp copy to s3', function (done) {
+    anyfile.from("scp://demo:password@test.rebex.net/readme.txt").to("s3://AKIAIZHM3T2QFIRSVQ5A:gxxxYv+PuyihUrg0EqJ8U1C0pxBwxZGPO0U2DuhX@s3.amazon.com/any-file-us/readme.txt", function(err, res) {
+      if (fs.exists('readme.txt')) {
+        fs.unlinkSync('readme.txt');
+      }
+      assert.ok(res);
+      done();
+    });
+  });
+
+  it('s3 copy to s3', function (done) {
+    anyfile.from("s3://AKIAIZHM3T2QFIRSVQ5A:gxxxYv+PuyihUrg0EqJ8U1C0pxBwxZGPO0U2DuhX@s3.amazon.com/any-file-us/readme.txt").to("s3://AKIAIZHM3T2QFIRSVQ5A:gxxxYv+PuyihUrg0EqJ8U1C0pxBwxZGPO0U2DuhX@s3.amazon.com/any-file-us/readme-final.txt", function(err, res) {
       if (fs.exists('readme.txt')) {
         fs.unlinkSync('readme.txt');
       }

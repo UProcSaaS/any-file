@@ -31,6 +31,7 @@ make test
 ```
 
 All test use public files shared on internet. So, you have to find no problems when testing.
+Please
 
 ### Samples
 
@@ -48,19 +49,21 @@ and define destination with method *to*
 to("protocol://username:password@server/path/to/file", callback)
 ```
 
-Next protocols are accepted by the system: ftp, http, scp, sftp, s3.
+Next protocols are accepted by the system: ftp, http, scp, s3 and local file system.
 
-Additionally, if no protocol schema is defined, local system is assumed.
+Additionally, if no protocol schema is defined, local system is assumed. 
+
+No file format is considered when transmiting. No file contents modification is applied when copying file from source to destination.
+Compression transformations will be applied on the future.
 
 Next are sources accepted by the library:
 
-* ftp://username:password@ftpserver.com/path/to/file.csv
-* s3://accesskey:secretkey@s3.amazonaws.com/bucket/path/to/file.csv (by default, us east zone)
-* s3://accesskey:secretkey@s3-eu-west.amazonaws.com/bucket/path/to/file.csv (specific amazon region: eu-west)
-* http://webserver.com/path/to/file.csv
-* http://username:password@webserver.com/path/to/file.csv
-* scp://username:password@sshserver.com/path/to/file.csv
-
+* ftp://username:password@ftpserver.com/file.zip (ftp)
+* http://webserver.com/path/to/file.csv (direct)
+* http://username:password@webserver.com/path/to/file.csv (auth)
+* scp://username:password@sshserver.com/path/to/file.csv (auth)
+* scp://username@sshserver.com/path/to/file.csv (authorized)
+* s3://accesskey:secretkey@s3.amazon.com/bucket/file.csv (us east zone only)
 
 You can copy ftp file to local file system
 ```
@@ -85,6 +88,30 @@ af.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to
 	}
 });
 ```
+
+Or copy from sftp to s3 
+```
+var af = new AnyFile();
+var fromFile = "sftp://demo:password@test.rebex.net:/readme.txt";
+var toFile = "s3://AKIAIZHM3T2QFIRSVQ5A:gxxxYv+PuyihUrg0EqJ8U1C0pxBwxZGPO0U2DuhX@s3.amazon.com/any-file-us/readme.txt";
+af.from(fromFile).to("100KB.zip", function(err, res) {
+	if (res) {
+		console.log("File copied!");
+	} else {
+		console.log("File not copied!");
+	}
+});
+```
+
+You can find more code samples on samples folder. You will find common samples with ftp, s3, scp and local. Please, check it out.
+
+## Todo
+
+On future releases, these features will be added:
+- compress/uncompress files (locally) if source and destination extensions differ. Samples: 
+	- from: .log extension => to: .log.gz extension (apply compression to destination file)
+	- from .log.bz2 extension => to: .log extension (apply uncompression to destination file)
+- events (start, progress, end, error) instead of callbacks
 
 ## Versioning
 
