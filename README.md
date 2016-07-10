@@ -24,6 +24,13 @@ Please, execute next command to install package
 npm install any-file
 ```
 
+After that, include the module in your code:
+
+```
+var AnyFile = require('any-file');
+```
+
+
 ## Running the tests
 
 To run tests, please execute
@@ -33,6 +40,7 @@ make test
 ```
 
 All test use public files shared on internet. So, you have to find no problems when testing.
+
 
 ### Samples
 
@@ -123,19 +131,23 @@ On future releases, these features will be added:
 	- from .log.bz2 extension => to: .log extension (apply bzip2 uncompression to source file)
 - events (start, progress, end, error) instead of callbacks
 
+
 ## Contributions
 
 Please, feel free to send pull requests or comments to the project. Contributions are welcome!
 
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
 
 ## Authors
 
 * **Miquel Colomer** - *Initial work* - [mcolomer](https://github.com/mcolomer)
 
 See also the list of [contributors](https://github.com/mcolomer/any-file/contributors) who participated in this project.
+
 
 ## License
 
