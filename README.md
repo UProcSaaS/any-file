@@ -133,7 +133,7 @@ On future releases, these features will be added:
 	- from: .log extension => to: .log.gz extension (apply gzip compression on destination file)
 	- from .log.bz2 extension => to: .log extension (apply bzip2 uncompression to source file)
 - events (start, progress, end, error) instead of callbacks
-
+- support multiple regions on s3
 
 ## Contributions
 
