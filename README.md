@@ -79,7 +79,7 @@ Next are sources accepted by the library:
 * http://username:password@webserver.com/path/to/file.csv (auth)
 * scp://username:password@sshserver.com/path/to/file.csv (auth)
 * scp://username@sshserver.com/path/to/file.csv (authorized)
-* s3://accesskey:secretkey@s3.amazon.com/bucket/file.csv (us east zone only)
+* s3://accesskey:secretkey@s3.amazon.com/bucket/path/to/file.csv (us east zone only)
 * /etc/host (local file)
 
 You can copy ftp file to local file system
