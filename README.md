@@ -78,7 +78,7 @@ Next sources are accepted by the library:
 * http://webserver.com/path/to/file.csv (direct)
 * http://username:password@webserver.com/path/to/file.csv (auth)
 * scp://username:password@sshserver.com/path/to/file.csv (auth)
-* scp://username@sshserver.com/path/to/file.csv (authorized. You need to add source host to .ssh/authorized_keys of user username)
+* scp://username@sshserver.com/path/to/file.csv (authorized. Add your host public_key to username .authorized_keys)
 * s3://accesskey:secretkey@s3.amazon.com/bucket/path/to/file.csv (us east zone only)
 * /etc/host (local file)
 
