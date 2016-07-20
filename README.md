@@ -72,7 +72,7 @@ Additionally, if no protocol schema is defined, local system is assumed.
 
 No file format is considered when transmiting. No file contents modification is applied when copying file from source to destination.
 
-Next are sources accepted by the library:
+Next sources are accepted by the library:
 
 * ftp://username:password@ftpserver.com/file.zip (ftp)
 * http://webserver.com/path/to/file.csv (direct)
