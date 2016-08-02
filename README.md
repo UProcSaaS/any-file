@@ -63,7 +63,7 @@ No file format is considered when transmiting. No file contents modification is 
 
 Next are sources accepted by the library:
 
-* ftp://username:password@ftpserver.com/file.zip (ftp)
+* ftp://username:password@ftpserver.com/file.zip (auth)
 * http://webserver.com/path/to/file.csv (direct)
 * http://username:password@webserver.com/path/to/file.csv (auth)
 * scp://username:password@sshserver.com/path/to/file.csv (auth)
