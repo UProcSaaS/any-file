@@ -2,9 +2,11 @@
 
 Node.js library to copy files between several storage sources (ftp, http, s3, ssh, local, ...)
 
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
 
 ### Prerequisities
 
@@ -16,6 +18,7 @@ sudo apt-get install nodejs
 
 Probably, library will work with older nodejs versions.
 
+
 ### Installing
 
 Please, execute next command to install package
@@ -23,6 +26,13 @@ Please, execute next command to install package
 ```
 npm install any-file
 ```
+
+After that, include the module in your code:
+
+```
+var AnyFile = require('any-file');
+```
+
 
 ## Running the tests
 
@@ -33,6 +43,7 @@ make test
 ```
 
 All test use public files shared on internet. So, you have to find no problems when testing.
+
 
 ### Samples
 
@@ -61,14 +72,14 @@ Additionally, if no protocol schema is defined, local system is assumed.
 
 No file format is considered when transmiting. No file contents modification is applied when copying file from source to destination.
 
-Next are sources accepted by the library:
+Next sources are accepted by the library:
 
 * ftp://username:password@ftpserver.com/file.zip (auth)
 * http://webserver.com/path/to/file.csv (direct)
 * http://username:password@webserver.com/path/to/file.csv (auth)
 * scp://username:password@sshserver.com/path/to/file.csv (auth)
-* scp://username@sshserver.com/path/to/file.csv (authorized)
-* s3://accesskey:secretkey@s3.amazon.com/bucket/file.csv (us east zone only)
+* scp://username@sshserver.com/path/to/file.csv (authorized. Add your host public_key to username .authorized_keys)
+* s3://accesskey:secretkey@s3.amazon.com/bucket/path/to/file.csv (us east zone only)
 * /etc/host (local file)
 
 You can copy ftp file to local file system
@@ -119,23 +130,27 @@ You can find more code samples on samples folder using accepted protocols (http,
 
 On future releases, these features will be added:
 - compress/uncompress files (locally) if source and destination extensions differ. Samples: 
-	- from: .log extension => to: .log.gz extension (apply gzip commpression on destination file)
-	- from .log.bz2 extension => to: .log extension (apply bzip2 uncompression to destination file)
+	- from: .log extension => to: .log.gz extension (apply gzip compression on destination file)
+	- from .log.bz2 extension => to: .log extension (apply bzip2 uncompression to source file)
 - events (start, progress, end, error) instead of callbacks
+- support multiple regions on s3
 
 ## Contributions
 
 Please, feel free to send pull requests or comments to the project. Contributions are welcome!
 
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
 
 ## Authors
 
 * **Miquel Colomer** - *Initial work* - [mcolomer](https://github.com/mcolomer)
 
 See also the list of [contributors](https://github.com/mcolomer/any-file/contributors) who participated in this project.
+
 
 ## License
 
