@@ -1,5 +1,4 @@
-var assert = require('assert'),
-    AnyFile = require('../'),
+var AnyFile = require('../'),
     anyfile;
 
 anyfile = new AnyFile();
