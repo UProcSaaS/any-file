@@ -79,7 +79,7 @@ Next sources are accepted by the library:
 * http://username:password@webserver.com/path/to/file.csv (auth)
 * scp://username:password@sshserver.com/path/to/file.csv (auth)
 * scp://username@sshserver.com/path/to/file.csv (authorized. Add your host public_key to username .authorized_keys)
-* s3://accesskey:secretkey@s3.amazon.com/bucket/path/to/file.csv (us east zone only)
+* s3://accesskey:secretkey@s3.amazon.com/bucket/path/to/file.csv
 * /etc/host (local file)
 
 You can copy ftp file to local file system
@@ -133,7 +133,6 @@ On future releases, these features will be added:
 	- from: .log extension => to: .log.gz extension (apply gzip compression on destination file)
 	- from .log.bz2 extension => to: .log extension (apply bzip2 uncompression to source file)
 - events (start, progress, end, error) instead of callbacks
-- support multiple regions on s3
 
 ## Contributions
 
