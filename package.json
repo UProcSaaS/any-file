@@ -1,6 +1,6 @@
 {
   "name": "any-file",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Node.js library to copy files between several storage sources (ftp, http, s3, ssh, local, ...)",
   "main": "index",
   "scripts": {
@@ -26,7 +26,9 @@
   },
   "homepage": "https://github.com/mcolomer/any-file",
   "dependencies": {
-    "aws-sdk": "^2.4.5",
+    "aws-sdk": "^2.5.3",
+    "debug": "^2.2.0",
+    "events": "^1.1.1",
     "jsftp": "^1.5.3",
     "s3": "^4.4.0",
     "scp2": "^0.5.0"
