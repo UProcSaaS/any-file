@@ -73,8 +73,6 @@ Additionally, if no protocol schema is defined, local system is assumed.
 You can compress and uncompress your files in all operations. Next are compression formats supported: zip, gz. 
 Please, take in consideration that some zip files have wrong headers. In those cases, file will be renamed to final extension only.
 
-No file format is considered when transmiting. No file contents modification is applied when copying file from source to destination.
-
 Next sources are accepted by the library:
 
 * ftp://username:password@ftpserver.com/file.zip (auth)
@@ -143,7 +141,8 @@ af.from(fromFile).to(toFile, function(err, res) {
 
 You can find more code samples on samples folder using accepted protocols (http, ftp, s3, scp and local). Please, check it out.
 
-## Running the tests
+
+## Debugging
 
 You can debug the library this way
 
