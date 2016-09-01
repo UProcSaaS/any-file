@@ -70,6 +70,9 @@ Next protocols are accepted by the library:
 
 Additionally, if no protocol schema is defined, local system is assumed. 
 
+You can compress and uncompress your files in all operations. Next are compression formats supported: zip, gz. 
+Please, take in consideration that some zip files have wrong headers. In those cases, file will be renamed to final extension only.
+
 No file format is considered when transmiting. No file contents modification is applied when copying file from source to destination.
 
 Next sources are accepted by the library:
@@ -124,14 +127,36 @@ af.from(fromFile).to(toFile, function(err, res) {
 });
 ```
 
+Or copy from sftp to s3 gzipped file
+```
+var af = new AnyFile();
+var fromFile = "sftp://demo:password@test.rebex.net:/readme.txt";
+var toFile = "s3://AKIAIZHM3T2QFIRSVQ5A:gxxxYv+PuyihUrg0EqJ8U1C0pxBwxZGPO0U2DuhX@s3.amazon.com/any-file-us/readme.txt.gz";
+af.from(fromFile).to(toFile, function(err, res) {
+	if (res) {
+		console.log("File copied!");
+	} else {
+		console.log("File not copied!");
+	}
+});
+```
+
 You can find more code samples on samples folder using accepted protocols (http, ftp, s3, scp and local). Please, check it out.
+
+## Running the tests
+
+You can debug the library this way
+
+```
+DEBUG=app node youfile.js
+```
+
+This will show debugging messages on console.
+
 
 ## Todo
 
 On future releases, these features will be added:
-- compress/uncompress files (locally) if source and destination extensions differ. Samples: 
-	- from: .log extension => to: .log.gz extension (apply gzip compression on destination file)
-	- from .log.bz2 extension => to: .log extension (apply bzip2 uncompression to source file)
 - events (start, progress, end, error) instead of callbacks
 
 ## Contributions
