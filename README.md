@@ -5,7 +5,7 @@ Node.js library to copy files between several storage sources (ftp, http, s3, ss
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Please, follow next instructions to get a working copy of the project up and running on your local machine for development and testing purposes. This is an unstable release. Please, don't use in production environments.
 
 
 ### Prerequisities
@@ -70,8 +70,8 @@ Next protocols are accepted by the library:
 
 Additionally, if no protocol schema is defined, local system is assumed. 
 
-You can compress and uncompress your files in all operations. Next are compression formats supported: zip, gz. 
-Please, take in consideration that some zip files have wrong headers. In those cases, file will be renamed to final extension only.
+You can compress and uncompress your files in all operations. Next are supported compression formats: zip, gzip. 
+Please, take in consideration that some zip files could have wrong headers. In those cases, file will be renamed to final extension only.
 
 Next sources are accepted by the library:
 
@@ -155,7 +155,7 @@ This will show debugging messages on console.
 
 ## Todo
 
-On future releases, these features will be added:
+On future releases, next features will be added:
 - events (start, progress, end, error) instead of callbacks
 
 ## Contributions
