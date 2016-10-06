@@ -174,6 +174,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 See also the list of [contributors](https://github.com/mcolomer/any-file/contributors) who participated in this project.
 
+## Who is using this repo?
+
+Next sites use this module:
+
+- [uProc](https://uproc.io/) - Data quality service with a huge catalog to normalize, validate, enrich and deduplicate your data
 
 ## License
 
