@@ -20,12 +20,12 @@ describe('anyfile', function () {
   });
 
   it('ftp copy to local', function (done) {
-    anyfile.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+    anyfile.from("ftp://speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
       assert.ok(res);
       done();
     });
   });
-
+  
   it('http copy to local', function (done) {
     anyfile.from("http://speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
       assert.ok(res);
