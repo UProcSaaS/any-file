@@ -1,4 +1,5 @@
 var fs = require('fs'),
+    debug = require('debug')('app'),
     assert = require('assert'),
     AnyFile = require('../'),
     anyfile;
@@ -19,8 +20,10 @@ describe('anyfile', function () {
     assert.ok(anyfile.from);
   });
 
+  
   it('ftp copy to local', function (done) {
-    anyfile.from("ftp://speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+    anyfile.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+      debug(err);
       assert.ok(res);
       done();
     });
