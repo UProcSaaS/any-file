@@ -1,6 +1,6 @@
 # Any-File
 
-Node.js library to copy files between several storage sources (ftp, http, s3, ssh, local, ...)
+Node.js library to copy files between several storage sources (ftp, http/https, s3, ssh, local, ...)
 
 
 ## Getting Started
@@ -178,7 +178,7 @@ See also the list of [contributors](https://github.com/mcolomer/any-file/contrib
 
 Next sites use this module:
 
-- [uProc](https://uproc.io/) - Data quality service with a huge catalog to normalize, validate, enrich and deduplicate your data
+- [uProc](https://uproc.io/ target="_blank") - Data quality service with a huge catalog to Normalize, Validate, Enrich and Deduplicate your data
 
 ## License
 
