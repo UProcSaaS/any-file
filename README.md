@@ -176,9 +176,9 @@ See also the list of [contributors](https://github.com/mcolomer/any-file/contrib
 
 ## Who is using this repo?
 
-Next sites use this module:
+Please, let me know if you are using this repository in a production environment. Next sites use this module:
 
-- [uProc](https://uproc.io/ target="_blank") - Data quality service with a huge catalog to Normalize, Validate, Enrich and Deduplicate your data
+- [uProc](https://uproc.io/) - Data quality service with a huge catalog to Normalize, Validate, Enrich and Deduplicate your data
 
 ## License
 
