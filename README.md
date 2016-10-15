@@ -63,7 +63,7 @@ to("protocol://username:password@server/path/to/file", callback)
 
 Next protocols are accepted by the library:
 * ftp
-* http (only download)
+* http, https (only download)
 * scp
 * s3 
 * local file system
@@ -77,7 +77,7 @@ Next sources are accepted by the library:
 
 * ftp://username:password@ftpserver.com/file.zip (auth)
 * http://webserver.com/path/to/file.csv (direct)
-* http://username:password@webserver.com/path/to/file.csv (auth)
+* https://username:password@webserver.com/path/to/file.csv (auth)
 * scp://username:password@sshserver.com/path/to/file.csv (auth)
 * scp://username@sshserver.com/path/to/file.csv (authorized. Add your host public_key to username .authorized_keys)
 * s3://accesskey:secretkey@s3.amazon.com/bucket/path/to/file.csv
