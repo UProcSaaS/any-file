@@ -68,7 +68,7 @@ describe('anyfile', function () {
   });
 
   it('s3 copy to s3', function (done) {
-    anyfile.from("s3://AKIAIZHM3T2QFIRSVQ5A:gxxxYv+PuyihUrg0EqJ8U1C0pxBwxZGPO0U2DuhX@s3.amazon.com/any-file-us/readme.txt").to("s3://AKIAIZHM3T2QFIRSVQ5A:gxxxYv+PuyihUrg0EqJ8U1C0pxBwxZGPO0U2DuhX@s3.amazon.com/any-file-us/readme-final.txt", function(err, res) {
+    anyfile.from("s3://AKIAIZHM3T2QFIRSVQ5A:gxxxYv+PuyihUrg0EqJ8U1C0pxBwxZGPO0U2DuhX@s3.amazon.com/any-file-us/readme.txt").to("s3://AKIAIZHM3T2QFIRSVQ5A:gxxxYv+PuyihUrg0EqJ8U1C0pxBwxZGPO0U2DuhX@s3.eu-central-1.amazon.com/any-file-us/readme-final.txt", function(err, res) {
       assert.ok(res);
       done();
     });
