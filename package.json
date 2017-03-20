@@ -26,15 +26,15 @@
   },
   "homepage": "https://github.com/mcolomer/any-file",
   "dependencies": {
-    "aws-sdk": "^2.5.3",
-    "debug": "^2.2.0",
+    "aws-sdk": "^2.28.0",
+    "debug": "^2.6.3",
     "events": "^1.1.1",
     "ftp": "^0.3.10",
-    "request": "^2.75.0",
+    "request": "^2.81.0",
     "s3": "^4.4.0",
     "scp2": "^0.5.0",
-    "yauzl": "^2.6.0",
-    "yazl": "^2.4.1"
+    "yauzl": "^2.7.0",
+    "yazl": "^2.4.2"
   },
   "devDependencies": {
     "assert": "^1.4.1",
