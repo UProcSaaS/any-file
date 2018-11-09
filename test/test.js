@@ -11,7 +11,7 @@ describe('anyfile', function () {
   };
 
   this.timeout(10000);//10 seconds
-  
+
   beforeEach(function(done){
     anyfile = new AnyFile();
     done();
@@ -24,18 +24,18 @@ describe('anyfile', function () {
   it('should have main methods', function () {
     assert.ok(anyfile.from);
   });
-  
+
   it('ftp copy to local', function (done) {
     anyfile.from("ftp://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
       assert.ok(res);
       deleteFile("100KB.zip", done);
     });
   });
-    
+
   it('http copy to local', function (done) {
-    anyfile.from("http://speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+    anyfile.from("http://d28rz98at9flks.cloudfront.net/61395/61395_user_guide.pdf").to("61395_user_guide.pdf", function(err, res) {
       assert.ok(res);
-      deleteFile("100KB.zip", done);
+      deleteFile("61395_user_guide.pdf", done);
     });
   });
 
@@ -47,9 +47,9 @@ describe('anyfile', function () {
   });
 
   it('http auth copy to local', function (done) {
-    anyfile.from("http://anonymous:miemail%40gmail.com@speedtest.tele2.net/100KB.zip").to("100KB.zip", function(err, res) {
+    anyfile.from("http://anonymous:miemail%40gmail.com@docs.uproc.io/pdf/resumen_del_servicio_ES.pdf").to("resumen_del_servicio_ES.pdf", function(err, res) {
       assert.ok(res);
-      deleteFile("100KB.zip", done);
+      deleteFile("resumen_del_servicio_ES.pdf", done);
     });
   });
 
